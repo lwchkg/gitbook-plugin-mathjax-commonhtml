@@ -6,8 +6,10 @@ const path = require('path');
 
 const pluginName = 'mathjax-commonhtml';
 
+// Default fonts: .font-family-0: Georgia, .font-family-1, ebook: Arial
 const defaultScalingCSS = '.font-family-0 .mjx-chtml {font-size: 111%}\n' +
-                          '.font-family-1 .mjx-chtml {font-size: 120%}\n';
+                          '.font-family-1 .mjx-chtml {font-size: 120%}\n' +
+                          '.page .section .mjx-chtml {font-size: 120%}\n';
 
 let cssNotArrived = true;
 

@@ -32,8 +32,9 @@ In this case, you can disable automatic scaling by adding the following to `book
 
 You can manually scale MathJax TeX fonts by adding the following CSS:
 ```
-body .mjx-chtml { font-size: 116%; }
+body .mjx-chtml, .page .section .mjx-chtml { font-size: 116%; }
 ```
+`body .mjx-chtml` is used for web site, and `.page .section .mjx-chtml` is used for ebook.
 
 You should set the font size to match the x-height of your current font.
 To know the percentage you need, check [this CodePen](http://codepen.io/lwchkg/pen/mOaNdx)
