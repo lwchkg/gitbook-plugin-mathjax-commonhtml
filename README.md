@@ -15,7 +15,7 @@ Add the plugin into `book.json` or `book.js`, e.g.
 ## Configuration
 
 This plugin scales the TeX font in MathJax automatically in the default set up.
-*If you do not modify GitBook font settings (not something that a beginner can do), then you do not need to configure this plugin.*
+**If you do not modify GitBook font settings (not something that a beginner can do), then you do not need to configure this plugin.**
 
 However, if you are using custom fonts in your book, or disables the [fontsettings plugin](https://plugins.gitbook.com/plugin/fontsettings), then default setting will not work.
 
@@ -63,11 +63,11 @@ Or using the templating syntax:
 
 This plugin has the TeX support of MathJax and the speed of KaTeX.
 
-*Comparing with MathJax*: mathjax-commonhtml generates the math server-side, while the official MathJax plugin generates the math client-side.
+**Comparing with MathJax**: mathjax-commonhtml generates the math server-side, while the official MathJax plugin generates the math client-side.
 It means that the web pages load much faster with this plugin.
 Also, it means PDF generation problem the official MathJax plugin will not happen with mathjax-commonhtml.
 
-*Comparing with KaTeX*: KaTeX supports only a limited set of TeX syntax, and spacing of equation environments are suboptimal.
+**Comparing with KaTeX**: KaTeX supports only a limited set of TeX syntax, and spacing of equation environments are suboptimal.
 This plugin, which is based on MathJax, does not have this limitation.
 
 
