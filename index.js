@@ -1,6 +1,6 @@
 'use strict';
 
-const cprp = require('cpr-promise');
+const fse = require('fs-extra');
 const mjAPI = require('mathjax-node/lib/mj-single.js');
 const path = require('path');
 
@@ -14,10 +14,7 @@ const defaultScalingCSS = '.font-family-0 .mjx-chtml {font-size: 111%}\n' +
 let cssNotArrived = true;
 
 mjAPI.config({
-  MathJax: {
-    // MathJax config
-    CommonHTML: {scale: 200},
-  },
+  MathJax: {},
   fontURL: '.',  // asset is placed at the same directory as the CSS file
 });
 mjAPI.start();
@@ -52,14 +49,11 @@ function WriteAssets(output, log, css, addDefaultScaling) {
   output.writeFile(path.join(pluginPath, 'mathjax.css'),
                    addDefaultScaling ? css + defaultScalingCSS : css);
 
-  const texInputPath = path.join(GetMathJaxPath(), 'fonts', 'HTML-CSS', 'Tex');
-  const texOutputPath = path.join(output.root(), pluginPath, 'Tex');
+  const texInputPath = path.join(GetMathJaxPath(), 'fonts', 'HTML-CSS', 'TeX');
+  const texOutputPath = path.join(output.root(), pluginPath, 'TeX');
   log.debug.ln('copy font files from MathJax');
-  cprp(texInputPath, texOutputPath, {
-    deleteFirst: false,
-    overwrite: true,
-    confirm: true,
-  });
+  fse.ensureDirSync(texOutputPath);
+  fse.copySync(texInputPath, texOutputPath, {preserveTimestamps: true});
 }
 
 /**

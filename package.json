@@ -1,6 +1,6 @@
 {
   "name": "gitbook-plugin-mathjax-commonhtml",
-  "version": "0.0.2",
+  "version": "0.0.5",
   "description": "MathJax integration into GitBook using MathJax's CommonHTML output processor, which is processed in the server side.",
   "homepage": "https://github.com/lwchkg/gitbook-plugin-mathjax-commonhtml",
   "bugs": {
@@ -20,7 +20,7 @@
   },
   "dependencies": {
     "mathjax-node": ">=0.5.2",
-    "cpr-promise": ">=0.2.0"
+    "fs-extra": ">=1.0.0"
   },
   "keywords": [
     "math",
