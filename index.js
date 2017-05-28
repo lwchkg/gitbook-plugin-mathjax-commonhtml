@@ -1,7 +1,7 @@
 'use strict';
 
 const fse = require('fs-extra');
-const mjAPI = require('mathjax-node/lib/mj-single.js');
+const mjAPI = require('mathjax-node/lib/main.js');
 const path = require('path');
 
 const pluginName = 'mathjax-commonhtml';
