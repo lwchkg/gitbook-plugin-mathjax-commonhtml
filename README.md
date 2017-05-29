@@ -66,10 +66,15 @@ This plugin has the TeX support of MathJax and the speed of KaTeX.
 
 **Comparing with MathJax**: mathjax-commonhtml generates the math server-side, while the official MathJax plugin generates the math client-side.
 It means that the web pages load much faster with this plugin.
-Also, it means PDF generation problem the official MathJax plugin will not happen with mathjax-commonhtml.
 
 **Comparing with KaTeX**: KaTeX supports only a limited set of TeX syntax, and spacing of equation environments are suboptimal.
 This plugin, which is based on MathJax, does not have this limitation.
+
+
+## Known problems
+Currently gitbook PDF and ebook generation does not work.
+The problem appears to be Calibre (the ebook generator) intercepting MathJax generated tags.
+If you are interested in creating PDF files for printing, I recommend my sister project “gitbook-pdfgen” though, which works nice with this plugin.
 
 
 ## Report bugs / Contributions
