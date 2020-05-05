@@ -20,7 +20,8 @@
   },
   "dependencies": {
     "mathjax-node": ">=1.0.0",
-    "fs-extra": ">=1.0.0"
+    "fs-extra": ">=1.0.0",
+    "snyk": "^1.319.0"
   },
   "keywords": [
     "math",
@@ -34,5 +35,10 @@
         "description": "Add the default math font scales (for Georgia and Arial). If you are using custom fonts, or have fontsettings plugin disabled, set this property to false."
       }
     }
-  }
+  },
+  "scripts": {
+    "snyk-protect": "snyk protect",
+    "prepublish": "npm run snyk-protect"
+  },
+  "snyk": true
 }
